@@ -1,0 +1,83 @@
+html {
+    font-size: 16px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color:#D7C49EFF;
+background-color: #343148FF;
+width: 90vw;
+margin: 10px auto;
+border: 1px solid #D4AFAF;
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: auto;
+padding: 10px;
+grid-template-areas:
+"nav . ."
+". title ."
+"main main main"
+"footer . ."
+}
+
+h1 {
+grid-area: title;
+border: 1px solid #D4AFAF;
+border-radius: 10px;
+background-color: #D4AFAF;
+color: #343148FF;
+}
+
+nav {
+grid-area: nav;
+}
+
+nav a {
+color:#D7C49EFF;
+margin-right: 10px;
+}
+
+main{
+grid-area: main;
+}
+
+h1, h2 {
+text-align: center;
+}
+
+.threeColumns {
+display: grid;
+grid-auto-flow:row;
+grid: 1fr 1fr 1fr/ auto;
+grid-auto-rows:min-content;
+gap: 1lh;
+}
+
+.project-block.column1 {
+grid-column-start:1;
+grid-column-end: span 1;
+grid-row-start:auto;
+grid-row-end: span 1;
+}
+
+.project-block.column2 {
+    grid-column-start:2;
+    grid-column-end: span 1;
+    grid-row-start:auto;
+    grid-row-end: span 1;
+}
+
+.project-block.column3 {
+    grid-column-start:3;
+    grid-column-end: span 1;
+    grid-row-start:auto;
+    grid-row-end: span 1;
+}
+
+footer {
+grid-area: footer;
+font-size: 0.75rem;
+}
